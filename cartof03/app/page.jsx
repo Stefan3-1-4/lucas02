@@ -38,7 +38,7 @@ export default function Home() {
               <p>working with JS universe</p>
             </div>
             
-            
+
             <div className='min-w-28'></div>
 
             <div className='flex-grow'>
@@ -47,10 +47,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <h2>Javascript</h2>
-        <h2>React</h2>
-        <h2>Cofee</h2>
+
+      <section className='flex justify-center'>
+        <div className='place-content-center mt-40 bg-gradient-to-b from-violet-400 via-violet-500 bg-clip-text text-transparent'>
+          <h2 className='text-8xl text-center mb-20 font-bold'>Javascript</h2>
+          <h2 className='text-8xl text-center mb-20 font-bold'>React</h2>
+          <h2 className='text-8xl text-center mb-20 font-bold'>Cofee</h2>
+        </div>
       </section>
       <section>
         <h2>Technologies i've been using</h2>
