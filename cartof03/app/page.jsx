@@ -38,6 +38,7 @@ export default function Home() {
               <p>working with JS universe</p>
             </div>
             
+            
             <div className='min-w-28'></div>
 
             <div className='flex-grow'>
