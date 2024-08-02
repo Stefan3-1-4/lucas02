@@ -13,7 +13,7 @@ const KeenSliderComponent = () => {
       loop: false,
       mode: 'free',
       slides: {
-        perView: 3,
+        perView: 2,
       },
     });
 
@@ -23,7 +23,7 @@ const KeenSliderComponent = () => {
   }, []);
 
   return (
-    <div ref={sliderRef} className="keen-slider">
+    <div ref={sliderRef} className="keen-slider w-full overflow-hidden">
       <div className="keen-slider__slide mx-7 bg-amber-200 text-black p-10 rounded-3xl">Javascript</div>
       <div className="keen-slider__slide mx-7 bg-emerald-200 text-black p-10 rounded-3xl">React</div>
       <div className="keen-slider__slide mx-7 bg-slate-100 text-black p-10 rounded-3xl">Next.js</div>
