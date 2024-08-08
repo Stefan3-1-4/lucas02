@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from 'react';
 import KeenSlider from 'keen-slider';
 import 'keen-slider/keen-slider.min.css';
-import Image from 'next/image';
 
 const KeenSliderComponent = () => {
   const sliderRef = useRef(null);
@@ -11,11 +10,10 @@ const KeenSliderComponent = () => {
 
   useEffect(() => {
     sliderInstance = new KeenSlider(sliderRef.current, {
-      loop: true,
+      loop: false,
       mode: 'free',
       slides: {
         perView: 3,
-        spacing: 15,
       },
     });
 
@@ -25,28 +23,45 @@ const KeenSliderComponent = () => {
   }, []);
 
   return (
-    <div ref={sliderRef} className="keen-slider max-w-fit overflow-hidden">
-      <div className="keen-slider__slide flex flex-col border-2 border-gray-800 rounded-lg p-6 space-y-3">
-        <h3 className="text-xl font-bold mb-4">Front-end Engineering Design</h3>
-        {['React JS', 'React Native', 'Next JS', 'Vite', 'Figma', 'Jest', 'React Testing Library'].map((tech, index) => (
-          <span key={index} className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
-            <span>{tech}</span>
-          </span>
-        ))}
+    <div ref={sliderRef} className="keen-slider w-full overflow-hidden">
+      <div className="keen-slider__slide mx-7 bg-black text-white p-10 rounded-3xl border-2 border-stone-800">Front engineering design
+        <ul>
+          <li>React Js</li>
+          <li>Reac Native</li>
+          <li>Next Js</li>
+          <li>Vite</li>
+          <li>Figma</li>
+          <li>Jest</li>
+          <li>React Testing Libray</li>
+        </ul>
       </div>
-
-      <div className="keen-slider__slide flex flex-col border-2 border-gray-800 rounded-lg p-6 space-y-3">
-        <h3 className="text-xl font-bold mb-4">Publications in both stores</h3>
-        {['Appstore', 'Google Play store'].map((store, index) => (
-          <span key={index} className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
-            <span>{store}</span>
-          </span>
-        ))}
+      <div className="keen-slider__slide min-h-fit max-h-44 mx-7 bg-black text-white p-10 rounded-3xl border-2 border-stone-800">Devops
+        <ul>
+          <li>Github Actions</li>
+          <li>Ngnx</li>
+          <li>Docker</li>
+        </ul>
       </div>
-
-      {/* Add similar structures for Back-End and Languages slides */}
+      <div className="keen-slider__slide max-h-36 mx-7 bg-black text-white p-10 rounded-3xl border-2 border-stone-800">Publications in both Stores
+        <ul>
+          <li>App Store</li>
+          <li>Google Play Store</li>
+        </ul>
+      </div>
+      <div className='keen-slider__slide max-h-36 mx-7 bg-black text-white p-10 rounded-3xl border-2 border-stone-800'>Backend
+        <ul>
+          <li>Node</li>
+          <li>Prisma</li>
+        </ul>
+      </div>
+      <div className='keen-slider__slide max-h-36 mx-7 bg-black text-white p-10 rounded-3xl border-2 border-stone-800'>Languages
+        <ul>
+          <li>Javascript</li>
+          <li>Typescript</li>
+        </ul>
+      </div>
+      <div className='keen-slider__slide mx-7 bg-black text-black p-10 rounded-3xl'></div>
+      <div className='keen-slider__slide mx-7 bg-black text-black p-10 rounded-3xl'></div>
     </div>
   );
 };
