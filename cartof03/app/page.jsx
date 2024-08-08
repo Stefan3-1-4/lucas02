@@ -57,8 +57,8 @@ export default function Home() {
           <h2 className='2xl:mt-44 text-8xl text-center mb-20 font-bold'>Cofee</h2>
         </div>
       </section>
-      <section className=''>
-        <h2 className='sm: mx-auto text-3xl max-w-56 text-center'>Technologies i've been using...</h2>
+      <section className='2xl:my-28  '>
+        <h2 className='2xl:text-7xl 2xl:mb-28 2xl:min-w-fit mx-auto text-3xl max-w-56 text-center'>Technologies i've been using...</h2>
         <div>
           <div className='infiniteKeensliderHere mt-10 '>
             <SecondKeenSliderComponent className="max-h-fit"/>
